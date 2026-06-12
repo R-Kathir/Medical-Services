@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Medical Authentication</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+/* ========= GLOBAL ========= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#150132,#6f2bae);
+display:flex;
+justify-content:center;
+align-items:center;
+overflow-y:auto;
+padding:15px;
+}
+
+/* ========= MAIN CARD ========= */
+.auth-wrapper{
+width:95%;
+max-width:1100px;
+min-height:650px;
+background:white;
+border-radius:18px;
+display:flex;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,.3);
+}
+
+/* ========= LEFT ========= */
+.auth-info{
+flex:1;
+background:linear-gradient(135deg,#150132,#6f2bae);
+color:white;
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.instructions{
+margin-top:20px;
+background:rgba(255,255,255,.15);
+padding:20px;
+border-radius:12px;
+}
+
+/* ========= RIGHT ========= */
+.auth-box{
+flex:1;
+position:relative;
+overflow:hidden;
+}
+
+/* ========= FORMS ========= */
+.form{
+position:absolute;
+width:100%;
+height:100%;
+padding:60px;
+transition:.6s;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.login{left:0;}
+.register{left:100%;}
+
+.auth-box.active .login{
+left:-100%;
+}
+
+.auth-box.active .register{
+left:0;
+}
+
+h2{
+margin-bottom:15px;
+color:#150132;
+}
+
+.error-msg{
+color:red;
+height:20px;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* ========= INPUT ========= */
+.input-group{
+position:relative;
+margin-bottom:18px;
+}
+
+input{
+width:100%;
+padding:14px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.eye{
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+}
+
+/* ========= BUTTON ========= */
+button{
+padding:14px;
+background:#150132;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#6f2bae;
+}
+
+.switch{
+margin-top:15px;
+text-align:center;
+}
+
+.switch a{
+color:#6f2bae;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* FORGOT PASSWORD */
+.forgot{
+margin-top:8px;
+text-align:right;
+font-size:14px;
+}
+
+.forgot a{
+color:#6f2bae;
+cursor:pointer;
+}
+
+/* ========= MOBILE ========= */
+@media(max-width:768px){
+
+body{
+align-items:flex-start;
+}
+
+.auth-wrapper{
+flex-direction:column;
+min-height:100vh;
+}
+
+.auth-info{
+padding:30px 20px;
+text-align:center;
+}
+
+.auth-box{
+min-height:75vh;
+overflow-y:auto;
+}
+
+.form{
+min-height:100%;
+padding:35px 25px 70px;
+justify-content:flex-start;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="auth-wrapper">
+
+<!-- LEFT PANEL -->
+<div class="auth-info">
+
+<h1>Stackly Medical</h1>
+
+<p>
+Secure Medical Device Monitoring Platform.
+Manage devices, patients and analytics safely.
+</p>
+
+<div class="instructions">
+<b>Authentication Instructions</b><br><br>
+✔ Fill all fields before login<br>
+✔ Password minimum 6 characters<br>
+✔ Empty form will not continue<br>
+✔ Secure dashboard access
+</div>
+
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="auth-box" id="authBox">
+
+<!-- LOGIN -->
+<div class="form login">
+
+<h2>Login</h2>
+<p class="error-msg" id="loginError"></p>
+
+<div class="input-group">
+<input type="email" placeholder="Email">
+</div>
+
+<div class="input-group">
+<input type="password" id="loginPass" placeholder="Password">
+<i class="fa-solid fa-eye eye"
+onclick="togglePass('loginPass',this)"></i>
+</div>
+
+<div class="forgot">
+<a onclick="forgotPassword()">Forgot Password?</a>
+</div>
+
+<button onclick="loginUser()">Login</button>
+
+<p class="switch">
+Don't have account?
+<a onclick="switchForm()">Register</a>
+</p>
+
+</div>
+
+<!-- REGISTER -->
+<div class="form register">
+
+<h2>Create Account</h2>
+<p class="error-msg" id="registerError"></p>
+
+<div class="input-group">
+<input type="text" placeholder="Full Name">
+</div>
+
+<div class="input-group">
+<input type="email" placeholder="Email">
+</div>
+
+<div class="input-group">
+<input type="password" id="regPass" placeholder="Password">
+<i class="fa-solid fa-eye eye"
+onclick="togglePass('regPass',this)"></i>
+</div>
+
+<div class="forgot">
+<a onclick="forgotPassword()">Forgot Password?</a>
+</div>
+
+<button onclick="registerUser()">Register</button>
+
+<p class="switch">
+Already have account?
+<a onclick="switchForm()">Login</a>
+</p>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* SWITCH LOGIN / REGISTER */
+function switchForm(){
+document.getElementById("authBox")
+.classList.toggle("active");
+}
+
+/* PASSWORD TOGGLE */
+function togglePass(id,icon){
+let input=document.getElementById(id);
+
+if(input.type==="password"){
+input.type="text";
+icon.classList.replace("fa-eye","fa-eye-slash");
+}else{
+input.type="password";
+icon.classList.replace("fa-eye-slash","fa-eye");
+}
+}
+
+/* FORGOT PASSWORD REDIRECT */
+function forgotPassword(){
+window.location.href="404.html";
+}
+
+/* LOGIN VALIDATION */
+function loginUser(){
+
+let email=document.querySelector(".login input[type=email]").value;
+let pass=document.getElementById("loginPass").value;
+let error=document.getElementById("loginError");
+
+if(email==="" || pass===""){
+error.innerText="⚠ Please fill all login fields";
+return;
+}
+
+error.style.color="green";
+error.innerText="✅ Login Successful";
+
+setTimeout(()=>{
+window.location.href="404.html";
+},1200);
+}
+
+/* REGISTER VALIDATION */
+function registerUser(){
+
+let name=document.querySelector(".register input[type=text]").value;
+let email=document.querySelector(".register input[type=email]").value;
+let pass=document.getElementById("regPass").value;
+let error=document.getElementById("registerError");
+
+if(name==="" || email==="" || pass===""){
+error.innerText="⚠ Complete all registration fields";
+return;
+}
+
+if(pass.length<6){
+error.innerText="⚠ Password must be 6 characters";
+return;
+}
+
+error.style.color="green";
+error.innerText="✅ Account Created";
+
+setTimeout(()=>{
+window.location.href="404.html";
+},1200);
+}
+
+</script>
+
+</body>
+</html>

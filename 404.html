@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 - Page Not Found | Stackly</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#150132,#6f2bae);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+/* ===== CONTAINER ===== */
+.error-container{
+max-width:700px;
+padding:40px;
+}
+
+/* ===== 404 TEXT ===== */
+.error-code{
+font-size:120px;
+font-weight:bold;
+letter-spacing:5px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+/* ===== MESSAGE ===== */
+.error-title{
+font-size:32px;
+margin-top:10px;
+}
+
+.error-text{
+margin:15px 0 35px;
+font-size:18px;
+opacity:.9;
+}
+
+/* ===== BUTTONS ===== */
+.btn-group{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 24px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+.home-btn{
+background:white;
+color:#150132;
+}
+
+.back-btn{
+background:transparent;
+border:2px solid white;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* ===== FLOAT ICONS ===== */
+.circle{
+position:absolute;
+border-radius:50%;
+background:rgba(255,255,255,.1);
+animation:move 8s linear infinite;
+}
+
+.circle:nth-child(1){
+width:120px;height:120px;
+top:10%;left:10%;
+}
+
+.circle:nth-child(2){
+width:80px;height:80px;
+bottom:15%;right:12%;
+}
+
+.circle:nth-child(3){
+width:60px;height:60px;
+top:70%;left:40%;
+}
+
+@keyframes move{
+0%{transform:translateY(0);}
+50%{transform:translateY(-40px);}
+100%{transform:translateY(0);}
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+.error-code{
+font-size:80px;
+}
+
+.error-title{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="error-container">
+
+<h1 class="error-code">404</h1>
+
+<h2 class="error-title">
+Oops! Page Not Found
+</h2>
+
+<p class="error-text">
+The page you are looking for does not exist or has been moved.<br>
+Stackly Medical System couldn't locate it.
+</p>
+
+<div class="btn-group">
+<button class="btn home-btn" onclick="goHome()">🏠 Home</button>
+<button class="btn back-btn" onclick="goBack()">⬅ Go Back</button>
+</div>
+
+</div>
+
+<script>
+
+function goHome(){
+window.location.href="index.html";
+}
+
+function goBack(){
+history.back();
+}
+
+</script>
+
+</body>
+</html>

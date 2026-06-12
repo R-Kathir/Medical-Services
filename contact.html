@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Stackly Medical</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700&family=Mulish:wght@400&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="header">
+
+<div class="logo">
+  <a href="index.html">
+    <img src="images/logo2.webp" alt="logo">
+  </a>
+</div>
+
+<nav class="nav" id="nav">
+
+<button class="close-btn" id="closeBtn">✕</button>
+
+<ul>
+
+<li class="dropdown">
+<a href="index.html">Home ▾</a>
+<ul class="menu">
+<li><a href="home2.html">Home 2</a></li>
+</ul>
+</li>
+
+<li><a href="404page.html">Services</a></li>
+
+<li class="dropdown">
+<a href="404page.html">Pages ▾</a>
+<ul class="menu">
+<li><a href="departments.html">Departments</a></li>
+<li><a href="about.html">AboutUs</a></li>
+<li><a href="ourdoctors.html">OurDoctors</a></li>
+
+
+</ul>
+</li>
+
+<li><a href="blog.html">Blog</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+
+</ul>
+
+<!-- ✅ MOBILE LOGIN -->
+<div class="mobile-login">
+ <a href="login.html" class="login-btn desktop-login">
+Login
+</a>
+</div>
+
+</nav>
+
+<!-- ✅ DESKTOP LOGIN -->
+
+<a href="login.html" class="login-btn desktop-login">
+Login
+</a>
+
+
+<div class="hamburger" id="hamburger">☰</div>
+
+</header>
+
+
+
+<section class="stackly-contact">
+
+<div class="contact-container">
+
+<!-- LEFT CONTENT -->
+<div class="contact-left">
+
+<span class="contact-tag">CONTACT STACKLY</span>
+
+<h2>
+Have inquiries?<br>
+Reach out to Stackly!
+</h2>
+
+<p>
+Stackly Medical Devices delivers advanced healthcare
+technology solutions and smart medical equipment support
+for hospitals and healthcare providers.
+</p>
+
+<div class="contact-info">
+<p>📍 Bangalore, India</p>
+<p>📞 +91 98765 43210</p>
+<p>✉ support@stacklymedical.com</p>
+</div>
+
+</div>
+
+
+<!-- RIGHT FORM -->
+<div class="contact-right">
+
+<form id="contactForm">
+
+<label>Name *</label>
+<input type="text" id="name" placeholder="Enter your name">
+
+<label>Email *</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Phone *</label>
+<input type="tel" id="phone" placeholder="Enter phone number">
+
+<label>Message *</label>
+<textarea id="message" placeholder="Enter your message"></textarea>
+
+<button type="submit">Send Message</button>
+
+<p id="errorMsg"></p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+    
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+  e.preventDefault(); // stop normal form submit
+
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const message = document.getElementById("message");
+  const errorMsg = document.getElementById("errorMsg");
+
+  // Reset
+  errorMsg.textContent = "";
+  name.classList.remove("error");
+  email.classList.remove("error");
+  phone.classList.remove("error");
+  message.classList.remove("error");
+
+  // Email regex
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  // Check empty fields
+  if (name.value.trim() === "" ||
+      email.value.trim() === "" ||
+      phone.value.trim() === "" ||
+      message.value.trim() === "") {
+
+      errorMsg.textContent = "Please fill all required fields.";
+      
+      if(name.value.trim() === "") name.classList.add("error");
+      if(email.value.trim() === "") email.classList.add("error");
+      if(phone.value.trim() === "") phone.classList.add("error");
+      if(message.value.trim() === "") message.classList.add("error");
+
+      return;
+  }
+
+  // Check email format
+  if (!emailPattern.test(email.value)) {
+      errorMsg.textContent = "Please enter a valid email address.";
+      email.classList.add("error");
+      return;
+  }
+
+  // If everything correct → redirect
+  window.location.href = "404.html";
+
+});
+
+
+
+
+
+
+
+</script>
+
+
+<!-- GOOGLE MAP -->
+<section class="stackly-map">
+<iframe
+src="https://www.google.com/maps?q=Bangalore,India&output=embed">
+</iframe>
+</section>
+
+
+<footer class="stackly-footer">
+
+<div class="footer-container">
+
+    <div class="footer-col">
+    <a href="index.html">
+    <img src="images/logo2.webp" class="footer-logo" alt="logo">
+  </a>
+
+        <p>
+            At Stackly, we deliver smarter healthcare
+            solutions focused on trust, innovation,
+            and patient wellbeing.
+        </p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Office</h4>
+        <p>
+            India —<br>
+            45 Health Street,<br>
+            Bangalore 560001
+        </p>
+
+        <p>info@stacklyhealth.com</p>
+        <h3>+91 98765 43210</h3>
+    </div>
+
+    <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+    <h4>Follow Us</h4>
+
+    <div class="social-icons">
+
+        <!-- Facebook -->
+        <a href="404.html" class="social-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z"/>
+            </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="404.html" class="social-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M7 2C4.2 2 2 4.2 2 7v10c0 
+                2.8 2.2 5 5 5h10c2.8 0 5-2.2 
+                5-5V7c0-2.8-2.2-5-5-5H7zm5 
+                5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 
+                1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+            </svg>
+        </a>
+
+        <!-- Twitter -->
+        <a href="404.html" class="social-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M22 5.9c-.8.4-1.6.6-2.5.7.9-.5 
+                1.5-1.3 1.8-2.3-.8.5-1.8.9-2.8 
+                1.1A4.3 4.3 0 0012 8.5c0 .3 
+                0 .7.1 1C8.3 9.3 5.1 7.5 
+                3 4.8c-.4.6-.6 1.3-.6 
+                2 0 1.4.7 2.6 1.8 
+                3.3-.7 0-1.3-.2-1.9-.5v.1c0 
+                2 1.4 3.7 3.3 4.1-.3.1-.7.2-1.1.2-.3 
+                0-.5 0-.8-.1.5 1.6 2.1 
+                2.8 4 2.9A8.7 8.7 0 
+                012 19.5a12.3 12.3 0 
+                006.7 2c8 0 12.4-6.6 
+                12.4-12.4v-.6c.8-.6 
+                1.5-1.3 2-2.1z"/>
+            </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a href="404.html" class="social-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M23 7s-.2-1.7-.8-2.4c-.8-.9-1.6-.9-2-1C17.6 
+                3 12 3 12 3h0s-5.6 
+                0-8.2.6c-.4.1-1.2.1-2 
+                1C1.2 5.3 1 7 1 7S1 
+                8.9 1 10.7v1.6C1 
+                14.1 1 16 1 
+                16s.2 1.7.8 2.4c.8.9 
+                1.9.9 2.4 1 1.8.2 
+                7.8.6 7.8.6s5.6 
+                0 8.2-.6c.4-.1 1.2-.1 
+                2-1 .6-.7.8-2.4.8-2.4s0-1.9 
+                0-3.7v-1.6C23 
+                8.9 23 7 23 7zM9.7 
+                14.6V8.9l5.5 
+                2.9-5.5 2.8z"/>
+            </svg>
+        </a>
+
+    </div>
+</div>
+
+</div>
+
+<!-- BIG BACKGROUND TEXT -->
+<div class="footer-bg-text">STACKLY</div>
+
+</footer>
+<script src="main.js"></script>
+
+</body>
+</html>
