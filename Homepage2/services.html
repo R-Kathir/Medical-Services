@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Health | Premium Medical Services</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html"><img src="./assets/Stackly-logo-Blue.webp" alt="logo" class="logo" loading="lazy"></a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="specialist.html" class="nav-link">Specialists</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <div class="nav-mob-view">
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                        <a href="404page.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary desktop-only">Login</a>
+                <a href="404page.html" class="btn btn-primary">Book Now</a>
+
+                <button class="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="sub-hero section-padding">
+        <div class="container hero-center-content">
+            <div class="hero-label fade-in-up">Medical Directory</div>
+            <h1 class="hero-title fade-in-up">
+                Centers of <br><span class="text-gradient">clinical excellence.</span>
+            </h1>
+            <p class="hero-lead fade-in-up">Explore our dedicated departments, each driven by global experts,
+                specialized research, and next-generation diagnostic technology.</p>
+        </div>
+    </section>
+    <section class="hub-directory section-padding">
+        <div class="container directory-grid">
+
+            <div class="directory-list-container">
+                <ul class="directory-list" id="directoryList">
+
+                    <li class="directory-item active" data-img="./assets/services1.webp">
+                        <a href="404page.html" class="directory-link" data-aos="fade-up" data-aos-delay="100">
+                            <span class="item-number">01</span>
+                            <span class="item-name">Advanced Cardiology</span>
+                            <span class="item-arrow">&rarr;</span>
+                        </a>
+                    </li>
+
+                    <li class="directory-item" data-img="./assets/services2.webp">
+                        <a href="404page.html" class="directory-link" data-aos="fade-up" data-aos-delay="150">
+                            <span class="item-number">02</span>
+                            <span class="item-name">Neurology & Brain Health</span>
+                            <span class="item-arrow">&rarr;</span>
+                        </a>
+                    </li>
+
+                    <li class="directory-item" data-img="./assets/services3.webp">
+                        <a href="404page.html" class="directory-link" data-aos="fade-up" data-aos-delay="200">
+                            <span class="item-number">03</span>
+                            <span class="item-name">Genomic Medicine</span>
+                            <span class="item-arrow">&rarr;</span>
+                        </a>
+                    </li>
+
+                    <li class="directory-item" data-img="./assets/services4.webp">
+                        <a href="404page.html" class="directory-link" data-aos="fade-up" data-aos-delay="250">
+                            <span class="item-number">04</span>
+                            <span class="item-name">High-Res Diagnostics</span>
+                            <span class="item-arrow">&rarr;</span>
+                        </a>
+                    </li>
+
+                    <li class="directory-item" data-img="./assets/services5.webp">
+                        <a href="404page.html" class="directory-link" data-aos="fade-up" data-aos-delay="300">
+                            <span class="item-number">05</span>
+                            <span class="item-name">Precision Oncology</span>
+                            <span class="item-arrow">&rarr;</span>
+                        </a>
+                    </li>
+
+                    <li class="directory-item" data-img="./assets/services6.webp">
+                        <a href="404page.html" class="directory-link" data-aos="fade-up" data-aos-delay="350">
+                            <span class="item-number">06</span>
+                            <span class="item-name">Regenerative Orthopedics</span>
+                            <span class="item-arrow">&rarr;</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="directory-visual-container">
+                <div class="visual-sticky-frame">
+                    <img src="./assets/services2.webp" alt="Department Preview" id="directoryImage"
+                        class="directory-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="support" class="section-padding feature-split-section">
+        <div class="container">
+
+            <div class="section-header center-text">
+                <div class="hero-label">Beyond Clinical Care</div>
+                <h2 class="section-title">Signature Support Programs.</h2>
+                <p class="section-subtitle">Comprehensive healthcare extends beyond the operating room. We provide
+                    dedicated concierge services to ensure your entire healing journey is seamless.</p>
+            </div>
+
+            <div class="feature-rows-wrapper">
+
+                <div class="feature-row">
+                    <div class="feature-visual" data-aos="fade-down">
+                        <img src="./assets/services-sec1.webp" alt="Specialist Board Review" loading="lazy">
+                    </div>
+                    <div class="feature-content" data-aos="fade-up">
+                        <div class="bento-icon">
+                            <span class="material-symbols-outlined">content_paste_search</span>
+                        </div>
+                        <h3 class="feature-title">Global Second Opinion</h3>
+                        <p class="feature-desc">Facing a complex diagnosis? Our multidisciplinary review board will
+                            analyze your existing medical records, imaging, and genomic data to provide a definitive,
+                            actionable second opinion within 72 hours—without you needing to travel.</p>
+                        <ul class="feature-list">
+                            <li>Secure digital records upload</li>
+                            <li>Review by top-tier specialists</li>
+                            <li>Detailed alternative treatment mapping</li>
+                        </ul>
+                        <a href="404page.html" class="btn btn-outline" style="margin-top: 2rem;">Request a Review</a>
+                    </div>
+                </div>
+
+                <div class="feature-row reverse">
+                    <div class="feature-visual" data-aos="fade-up">
+                        <img src="./assets/services-sec2.webp" alt="Premium Patient Suite" loading="lazy">
+                    </div>
+                    <div class="feature-content" data-aos="fade-down">
+                        <div class="bento-icon">
+                            <span class="material-symbols-outlined">room_service</span>
+                        </div>
+                        <h3 class="feature-title">International Patient Concierge</h3>
+                        <p class="feature-desc">For our patients traveling from abroad, our dedicated concierge team
+                            handles the logistics so you can focus entirely on your recovery. From medical visas to
+                            private recovery suites, we curate every detail.</p>
+                        <ul class="feature-list">
+                            <li>Medical visa & translation assistance</li>
+                            <li>Private aviation & ground transport coordination</li>
+                            <li>Post-treatment luxury recovery accommodations</li>
+                        </ul>
+                        <a href="404page.html" class="btn btn-outline" style="margin-top: 2rem;">Contact Concierge
+                            Team</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="access" class="section-padding access-section">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="hero-label">Patient Access</div>
+                <h2 class="section-title">Seamless Integration.</h2>
+                <p class="section-subtitle">We partner with the world’s leading health networks and institutions to
+                    ensure your transition into our care ecosystem is completely frictionless.</p>
+            </div>
+
+            <div class="marquee-container" data-aos="fade-up">
+                <div class="marquee-track">
+                    <div class="marquee-group">
+                        <span class="partner-logo">BlueCross Elite</span>
+                        <span class="partner-logo">United Global</span>
+                        <span class="partner-logo">Cigna Premium</span>
+                        <span class="partner-logo">Aetna Private</span>
+                        <span class="partner-logo">Mayo Clinic Affiliate</span>
+                        <span class="partner-logo">Bupa International</span>
+                    </div>
+                    <div class="marquee-group" aria-hidden="true">
+                        <span class="partner-logo">BlueCross Elite</span>
+                        <span class="partner-logo">United Global</span>
+                        <span class="partner-logo">Cigna Premium</span>
+                        <span class="partner-logo">Aetna Private</span>
+                        <span class="partner-logo">Mayo Clinic Affiliate</span>
+                        <span class="partner-logo">Bupa International</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="access-grid">
+
+                <div class="premium-access-card" data-aos="flip-up">
+                    <div class="icon-wrapper">
+                        <span class="material-symbols-outlined">public</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">In-Network Insurance</h3>
+                        <p class="card-body">We are a fully verified provider for over 50 global health networks. Our
+                            billing team handles all pre-authorizations and direct billing so you never have to deal
+                            with the paperwork.</p>
+                    </div>
+                    <a href="404page.html" class="access-link">
+                        Verify Coverage <span class="link-arrow">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="premium-access-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="icon-wrapper">
+                        <span class="material-symbols-outlined">diamond</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Private Concierge Pay</h3>
+                        <p class="card-body">For out-of-network or self-funded patients, we offer transparent,
+                            all-inclusive procedural pricing with dedicated financial advisors to map out your care
+                            investment.</p>
+                    </div>
+                    <a href="404page.html" class="access-link">
+                        View Pricing Models <span class="link-arrow">&rarr;</span>
+                    </a>
+                </div>
+
+                <div class="premium-access-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="icon-wrapper">
+                        <span class="material-symbols-outlined">flight_takeoff</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Institutional Transfer</h3>
+                        <p class="card-body">If you are being transferred from another hospital facility, our clinical
+                            logistics team manages the secure transfer of your physical care and digital health records.
+                        </p>
+                    </div>
+                    <a href="404page.html" class="access-link">
+                        Transfer Protocol <span class="link-arrow">&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer id="contact" class="site-footer">
+
+        <div class="container relative-container">
+            <div class="cta-card">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="cta-title">Ready to transform your health?</h2>
+                    <p class="cta-subtitle">Schedule your comprehensive consultation today and take the first step
+                        toward personalized, precision medical care.</p>
+                    <div class="cta-actions">
+                        <a href="404page.html" class="btn btn-primary cta-btn">Book Appointment</a>
+                        <a href="404page.html" class="btn btn-outline cta-btn light-outline">Call +91 9876543210</a>
+                    </div>
+                </div>
+                <div class="cta-glow"></div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container footer-grid">
+
+                <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="brand-logo logo"><img src="./assets/Stackly-logo-Blue.webp" alt="Logo"
+                            class="logo"></a>
+                    <p class="footer-desc">Pioneering the future of precision healthcare, one patient at a time.</p>
+
+                    <div class="social-links">
+                        <a href="404page.html" aria-label="LinkedIn" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                            </svg>
+                        </a>
+                        <a href="404page.html" aria-label="X (Twitter)" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="404page.html" aria-label="Instagram" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="specialist.html">Specialists</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Patient Resources</h4>
+                    <ul>
+                        <li><a href="404page.html">Portal Login</a></li>
+                        <li><a href="404page.html">Insurance & Billing</a></li>
+                        <li><a href="404page.html">Clinical Trials</a></li>
+                        <li><a href="404page.html">Telehealth Setup</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Health Insights</h4>
+                    <p>Subscribe to receive breakthrough medical news and clinical updates.</p>
+                    <form id="newsletterForm" class="newsletter-form" novalidate>
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                            <button type="submit" id="newsletterBtn" aria-label="Subscribe">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <span class="newsletter-error">Please enter a valid email.</span>
+                        <span class="newsletter-success">Subscribed successfully!</span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="container footer-legal">
+                <p>&copy; 2026 Stackly Health Systems. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const directoryItems = document.querySelectorAll('.directory-item');
+            const previewImage = document.getElementById('directoryImage');
+
+            directoryItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    directoryItems.forEach(el => el.classList.remove('active'));
+                    item.classList.add('active');
+
+                    const newImgSrc = item.getAttribute('data-img');
+
+                    if (previewImage.getAttribute('src') !== newImgSrc) {
+
+                        previewImage.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            previewImage.setAttribute('src', newImgSrc);
+
+                            requestAnimationFrame(() => {
+                                previewImage.classList.remove('fade-out');
+                            });
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

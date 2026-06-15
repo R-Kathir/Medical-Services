@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Health | Premium Medical Services</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <section class="portal-auth-layout">
+
+        <div class="portal-bg">
+            <div class="portal-bg-image" style="background-image: url('./assets/services1.webp');">
+            </div>
+            <div class="portal-bg-overlay"></div>
+        </div>
+
+        <div class="portal-container">
+
+            <a href="index.html" class="portal-logo">
+                <img src="./assets/Stackly-logo-Blue.webp" alt="Logo" class="logo">
+            </a>
+
+            <div class="glass-auth-card">
+
+                <div class="auth-tabs-segmented">
+                    <button class="auth-tab active" data-target="login-view">Log In</button>
+                    <button class="auth-tab" data-target="signup-view">Create Account</button>
+                </div>
+
+                <form id="login-view" class="auth-form active" novalidate>
+                    <div class="auth-header">
+                        <h2>Welcome Back</h2>
+                        <p>Access your secure clinical dashboard.</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="login-email" class="minimal-label">Email Address</label>
+                        <input type="email" id="login-email" class="minimal-input" placeholder="name@example.com"
+                            required>
+                        <span class="error-msg">Invalid email format.</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="login-password" class="minimal-label">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="login-password" class="minimal-input"
+                                placeholder="Enter your password" required>
+                            <button type="button" class="minimal-toggle-password"
+                                aria-label="Toggle visibility">Show</button>
+                        </div>
+                        <span class="error-msg">Password is required.</span>
+                    </div>
+
+                    <div class="auth-utilities">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="remember-me">
+                            <span class="custom-checkbox"></span>
+                            Remember me
+                        </label>
+                        <a href="404page.html" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn auth-btn">
+                        <span class="btn-text">Sign In Securely</span>
+                        <span class="btn-loader material-symbols-outlined">autorenew</span>
+                    </button>
+                </form>
+
+                <form id="signup-view" class="auth-form" novalidate>
+                    <div class="auth-header">
+                        <h2>Patient Registration</h2>
+                        <p>Begin your secure intake process.</p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="signup-fname" class="minimal-label">First Name</label>
+                            <input type="text" id="signup-fname" class="minimal-input" placeholder="First" required>
+                            <span class="error-msg">Required.</span>
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-lname" class="minimal-label">Last Name</label>
+                            <input type="text" id="signup-lname" class="minimal-input" placeholder="Last" required>
+                            <span class="error-msg">Required.</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="signup-email" class="minimal-label">Email Address</label>
+                        <input type="email" id="signup-email" class="minimal-input" placeholder="name@example.com"
+                            required>
+                        <span class="error-msg">Invalid email format.</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="signup-password" class="minimal-label">Create Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signup-password" class="minimal-input"
+                                placeholder="Min. 8 characters" required>
+                            <button type="button" class="minimal-toggle-password"
+                                aria-label="Toggle visibility">Show</button>
+                        </div>
+                        <span class="error-msg">Min. 8 characters required.</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-confirm" class="minimal-label">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signup-confirm" class="minimal-input"
+                                placeholder="Repeat password" required>
+                            <button type="button" class="minimal-toggle-password"
+                                aria-label="Toggle visibility">Show</button>
+                        </div>
+                        <span class="error-msg">Passwords do not match.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn auth-btn">
+                        <span class="btn-text">Create Account</span>
+                        <span class="btn-loader material-symbols-outlined">autorenew</span>
+                    </button>
+
+                    <p class="security-badge">
+                        <span class="material-symbols-outlined">verified_user</span>
+                        End-to-End Encrypted & HIPAA Compliant
+                    </p>
+                </form>
+            </div>
+
+            <a href="index.html" class="return-link">&larr; Return to main site</a>
+        </div>
+    </section>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const authTabs = document.querySelectorAll('.auth-tab');
+            const authForms = document.querySelectorAll('.auth-form');
+
+            function switchToTab(targetId) {
+                authTabs.forEach(t => {
+                    if (t.getAttribute('data-target') === targetId) {
+                        t.classList.add('active');
+                    } else {
+                        t.classList.remove('active');
+                    }
+                });
+
+                authForms.forEach(form => {
+                    if (form.id === targetId) {
+                        form.classList.add('active');
+                    } else {
+                        form.classList.remove('active');
+                        form.querySelectorAll('.input-group').forEach(grp => grp.classList.remove('has-error'));
+                    }
+                });
+            }
+
+            authTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.getAttribute('data-target');
+                    switchToTab(targetId);
+                });
+            });
+
+            document.querySelectorAll('.minimal-toggle-password').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const input = btn.parentElement.querySelector('input');
+
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        btn.textContent = 'Hide';
+                    } else {
+                        input.type = 'password';
+                        btn.textContent = 'Show';
+                    }
+                });
+            });
+
+            const setError = (inputElement) => {
+                inputElement.closest('.input-group').classList.add('has-error');
+            };
+
+            document.querySelectorAll('.minimal-input').forEach(input => {
+                input.addEventListener('input', () => {
+                    input.closest('.input-group').classList.remove('has-error');
+                });
+            });
+
+            const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            const loginView = document.getElementById('login-view');
+            if (loginView) {
+                loginView.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    let isValid = true;
+                    const form = e.target;
+
+                    const email = form.querySelector('#login-email');
+                    const pass = form.querySelector('#login-password');
+
+                    if (!validateEmail(email.value.trim())) { setError(email); isValid = false; }
+                    if (pass.value.trim() === '') { setError(pass); isValid = false; }
+
+                    if (isValid) {
+                        const btn = form.querySelector('.submit-btn');
+                        btn.classList.add('is-loading');
+                        setTimeout(() => {
+                            btn.classList.remove('is-loading');
+                            window.location.href = '404page.html';
+                        }, 1500);
+                    }
+                });
+            }
+
+            const signupView = document.getElementById('signup-view');
+            if (signupView) {
+                signupView.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    let isValid = true;
+                    const form = e.target;
+
+                    const fName = form.querySelector('#signup-fname');
+                    const lName = form.querySelector('#signup-lname');
+                    const email = form.querySelector('#signup-email');
+                    const pass = form.querySelector('#signup-password');
+                    const confirmPass = form.querySelector('#signup-confirm');
+
+                    if (fName.value.trim() === '') { setError(fName); isValid = false; }
+                    if (lName.value.trim() === '') { setError(lName); isValid = false; }
+                    if (!validateEmail(email.value.trim())) { setError(email); isValid = false; }
+                    if (pass.value.trim().length < 8) { setError(pass); isValid = false; }
+
+                    if (confirmPass.value.trim() === '' || confirmPass.value !== pass.value) {
+                        setError(confirmPass);
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        const btn = form.querySelector('.submit-btn');
+                        btn.classList.add('is-loading');
+
+                        setTimeout(() => {
+                            btn.classList.remove('is-loading');
+
+                            form.reset();
+                            switchToTab('login-view');
+
+                        }, 1500);
+                    }
+                });
+            }
+        }
+        );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Health | Premium Medical Services</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html"><img src="./assets/Stackly-logo-Blue.webp" alt="logo" class="logo" loading="lazy"></a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <div class="home-nav">
+                        <li> <a href="index.html" class="home-btn nav-link active">Home</a></li>
+                        <span class="material-symbols-outlined  dropdown-icon" id="homeDropdownBtn">
+                            expand_more
+                        </span>
+                        <div class="home-select" id="homeDropdown">
+                            <a href="../index.html" class="nav-link">Home Page 1</a>
+                        </div>
+                    </div>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="specialist.html" class="nav-link">Specialists</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <div class="nav-mob-view">
+                        <a href="login.html" class="btn btn-primary">Login</a>
+                        <a href="404page.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary desktop-only">Login</a>
+                <a href="404page.html" class="btn btn-primary">Book Now</a>
+
+                <button class="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="hero-split">
+        <div class="hero-grid container">
+
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-label fade-in-up">Healthcare of the Future</div>
+                <h1 class="hero-title">
+                    <span class="word">Personalized</span>
+                    <span class="word">Medical</span>
+                    <span class="word">Precision </span>
+                </h1>
+                <p class="hero-lead fade-in-up" style="color:black !important">Experience a new standard of healthcare,
+                    designed around your well-being
+                    and powered by leading medical experts and advanced diagnostics.</p>
+
+                <div class="hero-ctas fade-in-up">
+                    <a href="404page.html" class="btn btn-primary">Book an Appointment</a>
+                    <a href="404page.html" class="btn btn-secondary">Explore Services</a>
+                </div>
+
+                <div class="hero-trust fade-in-up">
+                    <div class="trust-item">
+                        <span class="trust-val">150+</span>
+                        <span class="trust-text">Leading Specialists</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-val">24/7</span>
+                        <span class="trust-text">Patient Care</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-val">99%</span>
+                        <span class="trust-text">Positive Outcomes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual"  data-aos="fade-down">
+            <div class="visual-collage fade-in-right">
+                <div class="collage-item large">
+                    <img src="./assets/hero1.webp" alt="Doctor consulting with patient" loading="lazy">
+                </div>
+
+                <div class="collage-item medium top">
+                    <img src="./assets/hero2.webp" alt="Modern MRI scanner" loading="lazy">
+                </div>
+
+                <div class="collage-item medium bottom">
+                    <img src="./assets/hero3.webp" alt="Medical diagnostic equipment close-up" loading="lazy">
+                </div>
+
+                <div class="collage-item large end">
+                    <img src="./assets/hero4.webp" alt="Nurse caring for patient in comfortable room" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <section id="services" class="section-padding showcase-section container">
+        <div class="container">
+
+            <div class="section-header sec-side">
+                <h2 class="section-title">Centers of Excellence</h2>
+                <p class="section-subtitle">Select a specialty below to explore our advanced care facilities and expert
+                    teams.</p>
+            </div>
+
+            <div class="showcase-wrapper">
+
+                <div class="showcase-nav"  data-aos="fade-up">
+                    <button class="showcase-tab active" data-target="panel-cardio">
+                        <span class="material-symbols-outlined tab-icon">cardiology</span> Advanced Cardiology
+                    </button>
+
+                    <button class="showcase-tab" data-target="panel-neuro">
+                        <span class="material-symbols-outlined tab-icon">neurology</span> Neurology
+                    </button>
+
+                    <button class="showcase-tab" data-target="panel-genetics">
+                        <span class="material-symbols-outlined tab-icon">genetics</span> Genomic Medicine
+                    </button>
+
+                    <button class="showcase-tab" data-target="panel-imaging">
+                        <span class="material-symbols-outlined tab-icon">biotech</span> High-Res Diagnostics
+                    </button>
+                </div>
+
+                <div class="showcase-display"  data-aos="fade-down">
+
+                    <div class="showcase-panel active" id="panel-cardio">
+                        <div class="panel-image">
+                            <img src="./assets/showcase1.webp" alt="Cardiology Surgery" loading="lazy">
+                        </div>
+                        <div class="panel-content">
+                            <h3>Advanced Cardiology</h3>
+                            <p>State-of-the-art diagnostics and minimally invasive treatments for complex heart
+                                conditions, led by global experts.</p>
+                            <a href="404page.html" class="btn btn-primary">Explore Cardiology</a>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-neuro">
+                        <div class="panel-image">
+                            <img src="./assets/showcase2.webp" alt="Neurology Scan" loading="lazy">
+                        </div>
+                        <div class="panel-content">
+                            <h3>Neurology & Brain Health</h3>
+                            <p>Precision care for neurological and cognitive disorders using next-generation neural
+                                mapping techniques.</p>
+                            <a href="404page.html" class="btn btn-primary">Explore Neurology</a>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-genetics">
+                        <div class="panel-image">
+                            <img src="./assets/showcase3.webp" alt="Genomics Lab" loading="lazy">
+                        </div>
+                        <div class="panel-content">
+                            <h3>Genomic Medicine</h3>
+                            <p>Personalized treatment plans and predictive healthcare mapping based entirely on your
+                                unique DNA profile.</p>
+                            <a href="404page.html" class="btn btn-primary">Explore Genomics</a>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-imaging">
+                        <div class="panel-image">
+                            <img src="./assets/showcase4.webp" alt="MRI Machine" loading="lazy">
+                        </div>
+                        <div class="panel-content">
+                            <h3>High-Resolution Diagnostics</h3>
+                            <p>Next-generation MRI, CT, and AI-assisted imaging ensuring rapid, hyper-accurate diagnoses
+                                without the wait times.</p>
+                            <a href="404page.html" class="btn btn-primary">View Imaging Tech</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="specialists" class="section-padding specialists-section">
+        <div class="container">
+
+            <div class="section-header"  data-aos="fade-up">
+                <h2 class="section-title">World-Class Specialists</h2>
+                <p class="section-subtitle">Connect with elite medical leaders recognized globally for clinical
+                    excellence, innovative research, and patient-first care.</p>
+            </div>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Specialties</button>
+                <button class="filter-btn" data-filter="cardio">Cardiology</button>
+                <button class="filter-btn" data-filter="neuro">Neurology</button>
+                <button class="filter-btn" data-filter="genetics">Genomics</button>
+            </div>
+
+            <div class="specialists-grid">
+
+                <div class="team-card" data-category="cardio">
+                    <div class="team-image">
+                        <img src="./assets/doc1-f.webp" alt="Dr. Evelyn Thorne" loading="lazy">
+                        <div class="team-overlay">
+                            <a href="404page.html" class="view-profile">
+                                <span> View Full Bio</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <span class="team-dept">Cardiology</span>
+                        <h3 class="team-name">Dr. Evelyn Thorne, MD</h3>
+                        <p class="team-edu">Harvard Medical School • 14 Yrs Exp</p>
+                    </div>
+                </div>
+
+                <div class="team-card" data-category="neuro">
+                    <div class="team-image">
+                        <img src="./assets/doc-m.webp" alt="Dr. Marcus Vance" loading="lazy">
+                        <div class="team-overlay">
+                            <a href="404page.html" class="view-profile">
+                                <span> View Full Bio</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <span class="team-dept">Neurology</span>
+                        <h3 class="team-name">Dr. Marcus Vance, PhD</h3>
+                        <p class="team-edu">Johns Hopkins University • 18 Yrs Exp</p>
+                    </div>
+                </div>
+
+                <div class="team-card" data-category="genetics">
+                    <div class="team-image">
+                        <img src="./assets/doc2-f.webp" alt="Dr. Amara Patel" loading="lazy">
+                        <div class="team-overlay">
+                            <a href="404page.html" class="view-profile">
+                                <span> View Full Bio</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <span class="team-dept">Genomic Medicine</span>
+                        <h3 class="team-name">Dr. Amara Patel, MD</h3>
+                        <p class="team-edu">Stanford Medicine • 11 Yrs Exp</p>
+                    </div>
+                </div>
+
+                <div class="team-card" data-category="cardio">
+                    <div class="team-image">
+                        <img src="./assets/doc2-m.webp" alt="Dr. Julian Rossi" loading="lazy">
+                        <div class="team-overlay">
+                            <a href="404page.html" class="view-profile">
+                                <span> View Full Bio</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <span class="team-dept">Cardiology</span>
+                        <h3 class="team-name">Dr. Julian Rossi, FACC</h3>
+                        <p class="team-edu">Columbia University • 20 Yrs Exp</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="technology" class="section-padding tech-section">
+        <div class="container">
+
+            <div class="section-header dark-header">
+                <div class="hero-label">Clinical Innovation</div>
+                <h2 class="section-title text-white">Pioneering the Future of Healthcare</h2>
+                <p class="section-subtitle text-gray">Integrating artificial intelligence, robotic precision, and
+                    advanced data analytics to deliver safer, faster, and more effective treatments.</p>
+            </div>
+
+            <div class="tech-grid">
+
+                <div class="tech-card bento-lg" data-aos="fade-up">
+                    <div class="tech-image">
+                        <img src="./assets/clinical1.webp" alt="Robotic Surgery" loading="lazy">
+                        <div class="tech-overlay-gradient"></div>
+                    </div>
+                    <div class="tech-content">
+                        <div class="tech-icon">🦾</div>
+                        <h3 class="tech-title">Robotic-Assisted Surgery</h3>
+                        <p class="tech-desc">Sub-millimeter precision for minimally invasive procedures, reducing
+                            recovery times by up to 40% and minimizing patient trauma.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card"  data-aos="fade-down">
+                    <div class="tech-image">
+                        <img src="./assets/clinical2.webp" alt="AI Diagnostics" loading="lazy">
+                        <div class="tech-overlay-gradient"></div>
+                    </div>
+                    <div class="tech-content">
+                        <div class="tech-icon">🧠</div>
+                        <h3 class="tech-title">AI Diagnostics</h3>
+                        <p class="tech-desc">Machine learning algorithms that detect anomalies in imaging 3x faster than
+                            traditional methods.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card"  data-aos="fade-down">
+                    <div class="tech-image">
+                        <img src="./assets/clinical3.webp" alt="Virtual Care" loading="lazy">
+                        <div class="tech-overlay-gradient"></div>
+                    </div>
+                    <div class="tech-content">
+                        <div class="tech-icon">📡</div>
+                        <h3 class="tech-title">Telehealth Hub</h3>
+                        <p class="tech-desc">Secure, high-definition virtual consultations bringing our experts directly
+                            to your home.</p>
+                    </div>
+                </div>
+
+                <div class="tech-card bento-wide" data-aos="fade-up">
+                    <div class="tech-image">
+                        <img src="./assets/clinical4.webp" alt="Smart Patient Rooms" loading="lazy">
+                        <div class="tech-overlay-gradient"></div>
+                    </div>
+                    <div class="tech-content tech-content-row">
+                        <div>
+                            <div class="tech-icon">🏥</div>
+                            <h3 class="tech-title">Smart Recovery Rooms</h3>
+                        </div>
+                        <p class="tech-desc">IoT-enabled patient suites that automatically monitor vitals, adjust
+                            environmental controls for optimal healing, and provide direct digital communication with
+                            the nursing station.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="journey" class="section-padding journey-section">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="hero-label">Your Pathway to Care</div>
+                <h2 class="section-title">A Seamless Patient Experience.</h2>
+                <p class="section-subtitle">From your first consultation to your final follow-up, our streamlined
+                    process ensures you receive focused, personalized care at every step.</p>
+            </div>
+
+            <div class="journey-track-wrapper" data-aos="fade-up">
+
+                <div class="scroll-hint">
+                    <span class="material-symbols-outlined">swipe</span>
+                    <span>Swipe to explore the journey</span>
+                    <span class="material-symbols-outlined arrow">arrow_right_alt</span>
+                </div>
+
+                <div class="journey-track">
+
+                    <div class="journey-step">
+                        <div class="step-visual">
+                            <div class="step-dot"></div>
+                            <div class="step-number">01</div>
+                        </div>
+                        <div class="step-card">
+                            <h3 class="step-title">Initial Mapping</h3>
+                            <p class="step-desc">A comprehensive review of your medical history, genetic
+                                predispositions, and current lifestyle factors with a dedicated care coordinator.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="step-visual">
+                            <div class="step-dot"></div>
+                            <div class="step-number">02</div>
+                        </div>
+                        <div class="step-card">
+                            <h3 class="step-title">Advanced Diagnostics</h3>
+                            <p class="step-desc">Utilizing our high-resolution imaging and AI-assisted labs to capture a
+                                hyper-accurate baseline of your biological health.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="step-visual">
+                            <div class="step-dot"></div>
+                            <div class="step-number">03</div>
+                        </div>
+                        <div class="step-card">
+                            <h3 class="step-title">Specialist Board Review</h3>
+                            <p class="step-desc">A multidisciplinary team of experts analyzes your data collaboratively
+                                to design a unified, personalized treatment strategy.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="step-visual">
+                            <div class="step-dot"></div>
+                            <div class="step-number">04</div>
+                        </div>
+                        <div class="step-card">
+                            <h3 class="step-title">Targeted Treatment</h3>
+                            <p class="step-desc">Execution of your customized care plan using the latest clinical
+                                technology and minimally invasive procedures.</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="step-visual">
+                            <div class="step-dot"></div>
+                            <div class="step-number">05</div>
+                        </div>
+                        <div class="step-card">
+                            <h3 class="step-title">Continuous Optimization</h3>
+                            <p class="step-desc">Post-treatment monitoring via our secure telehealth hub and smart
+                                wearables, ensuring long-term wellness and immediate adjustments if needed.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="outcomes" class="section-padding outcomes-section">
+        <div class="container outcomes-grid">
+
+            <div class="metrics-column">
+                <div class="section-header sec-side">
+                    <div class="hero-label">Clinical Outcomes</div>
+                    <h2 class="section-title">Measurable Excellence.</h2>
+                    <p class="section-subtitle">Data-driven healthcare that consistently exceeds global clinical
+                        benchmarks.</p>
+                </div>
+
+                <div class="stats-container" data-aos="fade-up">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99.8">0</span><span class="stat-suffix">%</span>
+                        <p class="stat-label">Surgical Success Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15000">0</span><span class="stat-suffix">+</span>
+                        <p class="stat-label">Lives Improved Annually</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="40">0</span><span class="stat-suffix">%</span>
+                        <p class="stat-label">Faster Recovery Times</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stories-column">
+                <div class="stories-wrapper">
+                    <div class="quote-icon">“</div>
+
+                    <div class="story-panel active">
+                        <p class="story-text">The level of precision and care I received was entirely unprecedented. The
+                            surgical robotics combined with the dedicated team made my recovery almost seamless. I was
+                            back home in half the expected time.</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <img src="./assets/review1.webp" alt="Sarah Jenkins" loading="lazy">
+                            </div>
+                            <div class="author-details">
+                                <span class="author-name">Sarah Jenkins</span>
+                                <span class="author-procedure">Robotic Cardiac Procedure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-panel">
+                        <p class="story-text">From the genomic mapping to the actual targeted therapy, everything felt
+                            like it was designed specifically for my biology. It’s not just medicine; it’s a completely
+                            personalized health strategy.</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <img src="./assets/review5.webp" alt="David Chen" loading="lazy">
+                            </div>
+                            <div class="author-details">
+                                <span class="author-name">David Chen</span>
+                                <span class="author-procedure">Precision Oncology Patient</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="story-controls">
+                    <button class="story-btn prev-btn" aria-label="Previous Story">&larr;</button>
+                    <button class="story-btn next-btn" aria-label="Next Story">&rarr;</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="faq" class="section-padding faq-section">
+        <div class="container faq-grid">
+
+            <div class="faq-intro" data-aos="fade-up">
+                <div class="sticky-content">
+                    <div class="hero-label">Patient Information</div>
+                    <h2 class="section-title">Common Questions.</h2>
+                    <p class="section-subtitle">Everything you need to know about preparing for your visit, insurance,
+                        and our care protocols.</p>
+                    <a href="404page.html" class="faq-link">Still have questions? Contact our team &rarr;</a>
+                </div>
+            </div>
+
+            <div class="faq-accordion">
+
+                <div class="accordion-item active" data-aos="fade-down">
+                    <button class="accordion-header" aria-expanded="true">
+                        <span class="accordion-title">Do I need a referral from a primary care physician?</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content-wrapper">
+                        <div class="accordion-content">
+                            <p>While many of our specialists accept direct appointments, certain premium insurance plans
+                                require a referral. Our care coordination team will verify your specific coverage during
+                                the initial intake call.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-aos="fade-down" data-aos-delay="200">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-title">What insurance networks do you accept?</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content-wrapper">
+                        <div class="accordion-content">
+                            <p>We are an in-network provider for most major global and national health networks,
+                                including BlueCross, Cigna, UnitedHealthcare, and Aetna. We also offer transparent,
+                                concierge-level self-pay options.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-aos="fade-down" data-aos-delay="300">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-title">How do I access my medical records and test results?</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content-wrapper">
+                        <div class="accordion-content">
+                            <p>All patients receive access to our secure digital Patient Portal. Imaging, lab results,
+                                and physician notes are automatically uploaded and available for you to view or share
+                                within 24 hours of your visit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-aos="fade-down" data-aos-delay="400">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-title">Do you offer post-surgery telehealth follow-ups?</span>
+                        <span class="accordion-icon"></span>
+                    </button>
+                    <div class="accordion-content-wrapper">
+                        <div class="accordion-content">
+                            <p>Yes. For eligible procedures, our "Continuous Optimization" program allows you to conduct
+                                post-operative check-ins via our secure telehealth hub from the comfort of your home.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="site-footer">
+
+        <div class="container relative-container">
+            <div class="cta-card">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 class="cta-title">Ready to transform your health?</h2>
+                    <p class="cta-subtitle">Schedule your comprehensive consultation today and take the first step
+                        toward personalized, precision medical care.</p>
+                    <div class="cta-actions">
+                        <a href="404page.html" class="btn btn-primary cta-btn">Book Appointment</a>
+                        <a href="404page.html" class="btn btn-outline cta-btn light-outline">Call +91 9876543210</a>
+                    </div>
+                </div>
+                <div class="cta-glow"></div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container footer-grid">
+
+                <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="brand-logo logo"><img src="./assets/Stackly-logo-Blue.webp" alt="Logo"
+                            class="logo"></a>
+                    <p class="footer-desc">Pioneering the future of precision healthcare, one patient at a time.</p>
+
+                    <div class="social-links">
+                        <a href="404page.html" aria-label="LinkedIn" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                            </svg>
+                        </a>
+                        <a href="404page.html" aria-label="X (Twitter)" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="404page.html" aria-label="Instagram" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="specialist.html">Specialists</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Patient Resources</h4>
+                    <ul>
+                        <li><a href="404page.html">Portal Login</a></li>
+                        <li><a href="404page.html">Insurance & Billing</a></li>
+                        <li><a href="404page.html">Clinical Trials</a></li>
+                        <li><a href="404page.html">Telehealth Setup</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Health Insights</h4>
+                    <p>Subscribe to receive breakthrough medical news and clinical updates.</p>
+                    <form id="newsletterForm" class="newsletter-form" novalidate>
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                            <button type="submit" id="newsletterBtn" aria-label="Subscribe">
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                        <span class="newsletter-error">Please enter a valid email.</span>
+                        <span class="newsletter-success">Subscribed successfully!</span>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="container footer-legal">
+                <p>&copy; 2026 Stackly Health Systems. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll('.showcase-tab');
+            const panels = document.querySelectorAll('.showcase-panel');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    panels.forEach(p => p.classList.remove('active'));
+
+                    tab.classList.add('active');
+
+                    const targetId = tab.getAttribute('data-target');
+                    const targetPanel = document.getElementById(targetId);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const teamCards = document.querySelectorAll('.team-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const targetSelection = button.getAttribute('data-filter');
+
+                    teamCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+
+                        if (targetSelection === 'all' || cardCategory === targetSelection) {
+                            card.classList.remove('is-hidden');
+                        } else {
+                            card.classList.add('is-hidden');
+                        }
+                    });
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const panels = document.querySelectorAll('.story-panel');
+            const nextBtn = document.querySelector('.next-btn');
+            const prevBtn = document.querySelector('.prev-btn');
+            let currentIndex = 0;
+
+            function showStory(index) {
+                panels.forEach(panel => panel.classList.remove('active'));
+                panels[index].classList.add('active');
+            }
+
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % panels.length;
+                    showStory(currentIndex);
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + panels.length) % panels.length;
+                    showStory(currentIndex);
+                });
+            }
+
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+
+            const runCounter = (counter) => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+                    if (count < target) {
+                        if (target % 1 !== 0) {
+                            counter.innerText = (count + inc).toFixed(1);
+                        } else {
+                            counter.innerText = Math.ceil(count + inc);
+                        }
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            };
+
+            const observerOptions = {
+                root: null,
+                threshold: 0.5
+            };
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        runCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    accordionItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        header.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+        });
+        const homeDropdownBtn = document.getElementById("homeDropdownBtn");
+        const homeDropdown = document.getElementById("homeDropdown");
+        const icon = document.querySelector(".dropdown-icon");
+
+        homeDropdownBtn.addEventListener("click", () => {
+            homeDropdown.classList.toggle("show");
+            icon.classList.toggle("rotate");
+        });
+        document.addEventListener("click", (e) => {
+            if (!homeDropdown.contains(e.target) && !homeDropdownBtn.contains(e.target)) {
+                homeDropdown.classList.remove("show");
+                icon.classList.remove("rotate");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,1 +1,277 @@
-<a href="index.html">Home</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Health | Premium Medical Services</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .not-found-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--clr-bg-main, #FFFFFF);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .watermark-404 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 35vw;
+            font-weight: 800;
+            color: var(--clr-bg-surface, #F4F4F5);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            letter-spacing: -0.05em;
+        }
+
+        .not-found-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .error-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            color: var(--clr-text-primary, #18181B);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .error-subtitle {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: var(--clr-text-secondary, #4A4A55);
+            margin-bottom: 3rem;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .action-btn .material-symbols-outlined {
+            font-size: 1.25rem;
+        }
+
+        .helpful-links {
+            font-size: 0.95rem;
+            color: var(--clr-text-muted, #A1A1AA);
+        }
+
+        .helpful-links span {
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .links-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .links-row a {
+            color: var(--clr-text-secondary, #4A4A55);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .links-row a:hover {
+            color: var(--clr-brand-primary, #0A66C2);
+        }
+
+        .links-row .divider {
+            color: var(--clr-border, #E4E4E9);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .watermark-404 {
+                font-size: 50vw;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <section class="not-found-section">
+
+        <div class="watermark-404" aria-hidden="true">404</div>
+
+        <div class="container not-found-content">
+
+            <div class="hero-label fade-in-up">System Error</div>
+            <h1 class="error-title fade-in-up">We couldn't locate <br>that page.</h1>
+            <p class="error-subtitle fade-in-up">The link you followed may be broken, or the directory may have been
+                moved. Let's get you back to the clinical ecosystem.</p>
+
+            <div class="error-actions fade-in-up">
+                <a href="index.html" class="btn btn-primary action-btn">
+                    <span class="material-symbols-outlined">home</span>
+                    Return to Homepage
+                </a>
+                <a href="contact.html" class="btn btn-outline action-btn">
+                    <span class="material-symbols-outlined">support_agent</span>
+                    Contact Support
+                </a>
+            </div>
+
+            <div class="helpful-links fade-in-up">
+                <span>Or explore our key departments:</span>
+                <div class="links-row">
+                    <a href="services.html">Services</a>
+                    <span class="divider">•</span>
+                    <a href="specialists.html">Specialists</a>
+                    <span class="divider">•</span>
+                    <a href="portal.html">Patient Portal</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+            const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+
+            tl.set(".fade-in-up", { y: 30 })
+
+                .fromTo(".hero-title .word span",
+                    { y: "110%" },
+                    {
+                        y: "0%",
+                        duration: 1.4,
+                        stagger: 0.1
+                    }, "-=0.6"
+                )
+
+                .to(".fade-in-up", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    stagger: 0.15
+                }, "-=0.9")
+
+                .fromTo(".hero-visual .fade-in-right", {
+                    opacity: 0,
+                    x: 30
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.2
+                }, "-=1.2");
+
+
+            const svgTl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+            svgTl
+                .to(".hub", { opacity: 1, scale: 1, duration: 1, delay: 1 })
+                .to(".node", {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    stagger: 0.2
+                }, "-=0.5")
+                .to(".conn", {
+                    opacity: 1,
+                    strokeDashoffset: 0,
+                    duration: 1,
+                    stagger: 0.15
+                }, "-=0.8");
+
+            gsap.to(".visual-container", {
+                y: -15,
+                duration: 3,
+                ease: "power1.inOut",
+                repeat: -1,
+                yoyo: true,
+                delay: 1
+            });
+            gsap.registerPlugin(ScrollTrigger);
+
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+
+            revealElements.forEach((el) => {
+                gsap.fromTo(el,
+                    {
+                        y: 50,
+                        opacity: 0,
+                        autoAlpha: 0
+                    },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        autoAlpha: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: el,
+                            start: "top 85%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
